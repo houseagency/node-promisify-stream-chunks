@@ -17,10 +17,10 @@ All chunks in an object stream are sent to a callback which returns a promise. T
 	rs.push({ test: 'third' });
 	rs.push(null);
 
-	rs.pipe(promisifyStreamChunks(() => {
+	rs.pipe(promisifyStreamChunks(chunk => {
 
 		return new Promise((resolve, reject) => {
-			doAsyncThings(() => {
+			doAsyncThings(chunk, () => {
 				resolve();
 
 				// If you want to transform the values in the stream, do:
