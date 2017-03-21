@@ -1,0 +1,23 @@
+{
+  "name": "promisify-stream-chunks",
+  "version": "1.0.0",
+  "description": "All chunks in a stream are sent to a callback which returns a promise. The next chunk will not be processed before the previous chunk's promise is resolved.",
+  "main": "index.js",
+  "scripts": {
+    "test": "node_modules/.bin/mocha test/**/*.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/houseagency/node-promisify-stream-chunks.git"
+  },
+  "author": "Alfred Godoy <alfred.godoy@houseagency.se>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/houseagency/node-promisify-stream-chunks/issues"
+  },
+  "homepage": "https://github.com/houseagency/node-promisify-stream-chunks#readme",
+  "devDependencies": {
+    "chai": "3.5.0",
+    "mocha": "3.2.0"
+  }
+}
