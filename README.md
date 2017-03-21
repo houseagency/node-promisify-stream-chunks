@@ -1,3 +1,5 @@
+[![Build Status](https://semaphoreci.com/api/v1/houseagency/node-promisify-stream-chunks/branches/master/shields_badge.svg)](https://semaphoreci.com/houseagency/node-promisify-stream-chunks)
+
 promisify-stream-chunks
 =======================
 
