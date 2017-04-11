@@ -5,18 +5,23 @@ class PromisifyStreamer extends Transform {
 		super({ objectMode: true });
 		this.cb = cb;
 	}
-	_transform(chunk, encoding, cb) {
+	_transform(chunk, encoding, next) {
+
+		this.pause();
 		this.cb(chunk)
 		.then(newchunk => {
 			if (typeof newchunk !== 'undefined') {
-				cb(null, newchunk);
+				next(null, newchunk);
 			} else {
-				cb(null, chunk);
+				next(null, chunk);
 			}
 		})
 		.catch(err => {
 			console.error(err);
-			cb(null, chunk);
+			next(null, chunk);
+		})
+		.then(() => {
+			this.resume();
 		});
 	}
 }
