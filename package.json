@@ -1,6 +1,6 @@
 {
   "name": "promisify-stream-chunks",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "All chunks in a stream are sent to a callback which returns a promise. The next chunk will not be processed before the previous chunk's promise is resolved.",
   "main": "index.js",
   "scripts": {
