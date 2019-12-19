@@ -17,7 +17,7 @@
   },
   "homepage": "https://github.com/houseagency/node-promisify-stream-chunks#readme",
   "devDependencies": {
-    "chai": "3.5.0",
-    "mocha": "3.2.0"
+    "chai": "^4.2.0",
+    "mocha": "^6.2.2"
   }
 }
